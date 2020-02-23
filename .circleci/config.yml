@@ -6,7 +6,7 @@ jobs:
       - image: circleci/php
     steps:
       - checkout
-      - run: apt-get update && apt-get -y install rsync git subversion wget zip unzip
+      - run: sudo apt-get update && apt-get -y install rsync git subversion wget zip unzip
       - run: rsync -avz $CIRCLE_WORKING_DIRECTORY leon@cloud.einfach123.de:/home/leon/ci/
 workflows:
   # Name the workflow "welcome"
