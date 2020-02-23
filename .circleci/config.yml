@@ -17,7 +17,7 @@ jobs:
       - run:
           <<: *noStrictHost
       - run: sudo apt-get update && sudo apt-get install rsync
-      - run: rsync -avze ./ leon@cloud.einfach123.de:/home/leon/ci/
+      - run: rsync -avz ./ leon@cloud.einfach123.de:/home/leon/ci/
 workflows:
   # Name the workflow "welcome"
   deploy:
